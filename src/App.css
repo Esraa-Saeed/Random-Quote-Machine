@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+/*
+===============
+SHARED STYLES
+===============
+*/
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*
+===============
+MAIN CONTAINER STYLES
+===============
+*/
+#quote-box {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 5px 7px 16px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: auto;
+  margin: 10px;
+}
+
+/*
+===============
+QUOTE AND AUTHOR STYLES
+===============
+*/
+.quote {
+  display: flex;
+  align-items: baseline;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#text {
+  margin-left: 10px;
+  margin-top: 20px;
+  align-self: center;
+  font-size: 25px;
+}
+
+#author {
+  align-self: flex-end;
+  margin-top: 20px;
+  font-size: small;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.bi-quote {
+  width: 3rem;
+  height: 3.5rem;
+  margin-bottom: 20px;
+}
+
+/*
+===============
+BUTTON AND ICON STYLES
+===============
+*/
+.btn-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.fa-twitter,
+.btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
   color: white;
+  border: 0;
+
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  cursor: pointer;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.fa-twitter:hover {
+  font-size: 20px;
+}
+
+/* .fa-twitter:hover {
+  background-color: rgba(0, 128, 0, 0.377);
+}
+
+.btn:hover {
+  background-color: rgba(0, 128, 0, 0.377);
+  cursor: pointer;
+} */
+
+/*
+===============
+FOOTER STYLES
+===============
+*/
+footer {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 250;
+}
+
+/*
+===============
+MEDIA STYLES
+===============
+*/
+@media (min-width: 576px) {
+  #quote-box {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 5px 7px 16px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 500px;
   }
 }
